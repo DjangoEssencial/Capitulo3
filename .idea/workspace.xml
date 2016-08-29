@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d9cb0d5-dd1c-4750-8b20-bd2f94731c79" name="Default" comment="Pagina 81&#10;&#10;https://docs.djangoproject.com/en/1.10/howto/custom-management-commands/">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_build/contact/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_build/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_build/login/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sitebuilder/management/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sitebuilder/management/commands/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sitebuilder/management/commands/build.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Capítulo 3.iml" afterPath="$PROJECT_DIR$/.idea/Capítulo 3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="3d9cb0d5-dd1c-4750-8b20-bd2f94731c79" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index.html" afterPath="$PROJECT_DIR$/pages/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prototypes.py" afterPath="$PROJECT_DIR$/prototypes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sitebuilder/templates/base.html" afterPath="$PROJECT_DIR$/sitebuilder/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sitebuilder/templates/page.html" afterPath="$PROJECT_DIR$/sitebuilder/templates/page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sitebuilder/management/commands/build.py" afterPath="$PROJECT_DIR$/sitebuilder/management/commands/build.py" />
     </list>
     <ignored path="Capítulo 3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,8 +39,8 @@
       <file leaf-file-name="build.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sitebuilder/management/commands/build.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            <state relative-caret-position="252">
+              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -527,6 +514,14 @@
       <option name="presentableId" value="Default" />
       <updated>1472232339036</updated>
     </task>
+    <task id="LOCAL-00001" summary="Pagina 81&#10;&#10;https://docs.djangoproject.com/en/1.10/howto/custom-management-commands/">
+      <created>1472493131591</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1472493131591</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -882,8 +877,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sitebuilder/management/commands/build.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="252">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

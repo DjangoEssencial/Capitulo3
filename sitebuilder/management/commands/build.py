@@ -17,7 +17,9 @@ def get_pages():
 class Command(BaseCommand):
     help = 'Build static site output.'
 
-    
+    def add_arguments(self, parser):
+        #Se liga nisso
+        parser.add_argument('page')
 
     def handle(self, *args, **options):
         # Solicita as paginas e gera a saida
