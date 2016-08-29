@@ -14,10 +14,19 @@ settings.configure(
     INSTALLED_APPS=(
         'django.contrib.staticfiles',
         'sitebuilder',
-        #'django.contrib.webdesign', obsoleto a partir do django 1.8
+        # 'django.contrib.webdesign', obsoleto a partir do django 1.8
     ),
 
+    TEMPLATES=(
+            {
+                'BACKEND': 'django.template.backends.django.DjangoTemplates',
+                'DIRS': (os.path.join(BASE_DIR, 'templates'), ),
+                'APP_DIRS': True,
+             },
+         ),
+
     STATIC_URL='/static/',
+
     SITE_PAGES_DIRECTORY=os.path.join(BASE_DIR, 'pages'),
 )
 

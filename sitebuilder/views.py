@@ -6,19 +6,19 @@ from django.shortcuts import render
 from django.template import Template
 from django.utils._os import safe_join
 
+
 def get_page_or_404(name):
-    """Retorna o conteúdo da página ou gera o erro 404"""
+    # Retorna o conteudo da pagina ou gera o erro 404
     try:
         file_path = safe_join(settings.SITE_PAGES_DIRECTORY, name)
     except ValueError:
-        raise Http404('Pagina não encontrada')
+        raise Http404('Pagina nao encontrada 1')
     else:
         if not os.path.exists(file_path):
-            raise Http404('Pagina nao encontrada')
-        #open (filename, mode) r=read, w=witring, a=append,
+            raise Http404('Pagina nao encontrada 2')
+        # open (filename, mode) r=read, w=witring, a=append,
     with open(file_path, 'r') as f:
         page = Template(f.read())
-
     return page
 
 
