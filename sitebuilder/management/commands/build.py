@@ -17,9 +17,18 @@ def get_pages():
 class Command(BaseCommand):
     help = 'Build static site output.'
 
-    def add_arguments(self, parser):
-        #Se liga nisso
-        parser.add_argument('page')
+    #def add_arguments(self, parser):
+         #Se liga nisso
+        #parser.add_argument('page', default=False)
+
+         # Named (optional) arguments
+         # parser.add_argument(
+         #     '--delete',
+         #     action='store_true',
+         #     dest='delete',
+         #     default=False,
+         #     help='Delete poll instead of closing it',
+         # )
 
     def handle(self, *args, **options):
         # Solicita as paginas e gera a saida
@@ -42,6 +51,7 @@ class Command(BaseCommand):
             os.mkdir(settings.SITE_OUTPUT_DIRECTORY)
             os.makedirs(settings.STATIC_ROOT)
             call_command('collectstatic', interactive=False, clear=True, verbosity=0)
+            call_command('compress', interactive=False, force=True)
             client = Client()
             for page in pages:
                 url = reverse('page', kwargs={'slug': page})
