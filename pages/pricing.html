@@ -1,3 +1,34 @@
+{% block context %}
+{
+	"description":"Preços Produtos Planos",
+	"keywords":"produtos,preços,compre",
+	"plans":[{
+		"name": "Plano Inicial",
+		"price": "Grátis",
+		"class": "success",
+		"features":[1]
+	},
+	{
+		"name": "Plano Básico",
+		"price": "R$25,00 / mês",
+		"class": "danger",
+		"features":[1, 2]
+	},
+	{
+		"name": "Plano Empresarial",
+		"price": "R$45,00 / mês",
+		"class": "info",
+		"features":[1, 2, 3]
+	}
+	],
+	"features":[
+		"Site Dinâmico 1#",
+		"Banco de Dados 2#",
+		"Atendimento 24horas 3#"
+	]
+}
+{% endblock %}
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -5,53 +36,29 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
-            <div class="panel panel-success">
-                <div class="panel-heading">
-                    <h4 class="text-center"> Plano Inicial - Gratis </h4>
-                </div>
-                <ul class="list-group list-group-flush text-center">
-                    <li class="list-group-item">Atributo #1</li>
-                    <li class="list-group-item disabled">Atributo #2</li>
-                    <li class="list-group-item disabled">Atributo #3</li>
-                </ul>
-                <div class="panel-footer">
-                    <a class="btn btn-lg btn-block btn-success" href="#">Compre Agora!</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="panel panel-danger">
-                <div class="panel-heading">
-                    <h4 class="text-center"> Plano Basico - 10$ / Mes </h4>
-                </div>
-                <ul class="list-group list-group-flush text-center">
-                    <li class="list-group-item">Atributo #1</li>
-                    <li class="list-group-item disabled">Atributo #2</li>
-                    <li class="list-group-item disabled">Atributo #3</li>
-                </ul>
-                <div class="panel-footer">
-                    <a class="btn btn-lg btn-block btn-success" href="#">Compre Agora!</a>
+        {% for plan in plans %}
+            <div class="col-md-4">
+                <div class="panel panel-{{plan.class}}">
+                    <div class="panel-heading">
+                        <h4 class="text-center"> Plano {{plan.name}} - {{plan.price}} </h4>
+                    </div>
+                    <ul class="list-group list-group-flush text-center">
+                        {% for feature in features %}
+                        <li class="list-group-item
+                        {% if forloop.counter not in planos.features %}
+                        disabled
+                        {% endif %}
+                        ">
+                        {{feature}}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <div class="panel-footer">
+                        <a class="btn btn-lg btn-block btn-{{ plan.class }}" href="#">Compre Agora!</a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h4 class="text-center"> Plano Empresarial - 20$ / Mes </h4>
-                </div>
-                <ul class="list-group list-group-flush text-center">
-                    <li class="list-group-item">Atributo #1</li>
-                    <li class="list-group-item disabled">Atributo #2</li>
-                    <li class="list-group-item disabled">Atributo #3</li>
-                </ul>
-                <div class="panel-footer">
-                    <a class="btn btn-lg btn-block btn-success" href="#">Compre Agora!</a>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
     <div class="row">
         <div class="col-md-12">

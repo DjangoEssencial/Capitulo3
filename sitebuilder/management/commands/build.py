@@ -17,18 +17,8 @@ def get_pages():
 class Command(BaseCommand):
     help = 'Build static site output.'
 
-    #def add_arguments(self, parser):
-         #Se liga nisso
-        #parser.add_argument('page', default=False)
-
-         # Named (optional) arguments
-         # parser.add_argument(
-         #     '--delete',
-         #     action='store_true',
-         #     dest='delete',
-         #     default=False,
-         #     help='Delete poll instead of closing it',
-         # )
+    def add_arguments(self, parser):
+        parser.add_argument('page', nargs='?', default=False)
 
     def handle(self, *args, **options):
         # Solicita as paginas e gera a saida
@@ -44,6 +34,7 @@ class Command(BaseCommand):
             if invalid:
                 msg = 'Invalid pages: {}'.format(', '.join(invalid))
                 raise CommandError(msg)
+
         else:
             pages = get_pages()
             if os.path.exists(settings.SITE_OUTPUT_DIRECTORY):
